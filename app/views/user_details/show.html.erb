@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Birth Date:</strong>
+  <%= @user.bdate %>
+</p>
+
+<p>
+  <strong>Father name:</strong>
+  <%= @user.father_name %>
+</p>
+
+<p>
+  <strong>children name:</strong>
+  <%= @user.children %>
+</p>
+
+<p>
+  <strong>Aadhar:</strong>
+  <%= image_tag @user.aadhar.url(:thumb)%>
+</p>
+
+
+<%= link_to 'Back', user_details_path %>

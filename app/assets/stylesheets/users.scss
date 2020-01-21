@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  color: #333;
+}
+
+.container {
+  max-width: 60rem;
+}

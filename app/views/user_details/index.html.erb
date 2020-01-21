@@ -1,0 +1,35 @@
+<h1>Users</h1>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>Name</th>
+				<th>Birth Date</th>
+				<th>Father name</th>
+				<th>Children</th>
+        <th>Aadhar</th>
+        <th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @users.each do |object| %>
+				<tr>
+					<td><%= object.name %></td>
+					<td><%= object.bdate %></td>
+					<td><%= object.father_name %></td>
+          <td><%= object.children %></td>
+          <td>
+            <a href="<%= object.aadhar %>" id="aadhar_image" width="100">
+              <img class="img-thumbnail" src="<%= object.aadhar %>" width="50"/>
+            </a>
+          </td>
+					<td>
+            <%= link_to 'Show', user_detail_path(object) %>
+					  <%= link_to 'Destroy', user_detail_path(object) , method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+  <%= paginate @users, :page_links => false %>
+

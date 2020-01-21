@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hindustani</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',  integrity:'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin:'anonymous' %>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@3.0.0-beta.1//js/froala_editor.pkgd.min.js"></script>
+    <%= javascript_include_tag 'https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="main_content">
+      <div id="header">
+        <% if user_signed_in? %>
+          <div class="buttons">
+            <strong><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></strong>
+          </div>
+        <% end %>
+      </div>
+      <% flash.each  do |name, msg| %>
+        <div>
+          <strong><%= content_tag(:div, msg, class: "alert alert-info") %></strong>
+        </div>
+      <% end %>
+        <br><%= yield %>
+    </div>
+  </body>
+</html>
+
