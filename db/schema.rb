@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_21_142248) do
+ActiveRecord::Schema.define(version: 2020_01_21_202444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_142248) do
     t.string "aadhar_content_type"
     t.bigint "aadhar_file_size"
     t.datetime "aadhar_updated_at"
+    t.datetime "birth_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

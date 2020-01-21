@@ -28,8 +28,9 @@
     </div>
 
     <div class="field">
-      <%= f.label :bdate %><br />
-      <%= f.text_field :bdate, autofocus: true%>
+      <%= f.label :birth_date %><br />
+      <%= f.date_select :birth_date, autofocus: true%>
+      <%= f.time_select :birth_date, autofocus: true%>
     </div>
 
     <div class="field">

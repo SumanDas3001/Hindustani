@@ -2,7 +2,7 @@ class UserDetailsController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.order("id desc").page(params[:page]).per(1)
+    @users = User.order("created_at desc").page(params[:page]).per(5)
   end
 
   def show
@@ -46,6 +46,6 @@ class UserDetailsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:name, :aadhar, :bdate, :father_name, :children)
+    params.require(:user).permit(:name, :aadhar, :birth_date, :father_name, :children)
   end
 end

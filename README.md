@@ -2,7 +2,7 @@
 
 1. App will have following pages:
 
-2. Index page, listing people with details like, name, aadhar, bdate etc. with just "Show    detail" link, which opens Details page. It should have pagination.
+2. Index page, listing people with details like, name, aadhar, birth_date etc. with just "Show    detail" link, which opens Details page. It should have pagination.
 
 3. Detail page, that shows following information of the person
  - Name
