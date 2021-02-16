@@ -39,7 +39,7 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'paperclip', '~> 6.1'
 gem 'smart_listing', '~> 1.2', '>= 1.2.3'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 
 
 group :development, :test do
